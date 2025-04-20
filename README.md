@@ -44,7 +44,7 @@ Xfolio, içerik üreticileri ve markalar için geliştirilmiş kapsamlı bir por
 
 1. Repoyu klonlayın:
 ```bash
-git clone https://github.com/yourusername/xfolio.git
+git clone https://github.com/KuraPiee/xfolio.git
 ```
 
 2. Veritabanı yapılandırması:
@@ -76,8 +76,8 @@ git clone https://github.com/yourusername/xfolio.git
 
 ## İletişim
 
-Herhangi bir soru, öneri veya geri bildirim için lütfen [erensitki@mail.com](mailto:erensitki@mail.com) adresine e-posta gönderin.
+https://xren.com.tr
 
 ---
 
-&copy; 2025 Xfolio | Tüm hakları saklıdır.
+&copy; 2025 Xren | Tüm hakları saklıdır.
