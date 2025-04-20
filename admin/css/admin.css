@@ -1,0 +1,201 @@
+/* Admin Panel Özel CSS Dosyası */
+
+body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Navbar arkasında */
+  padding: 48px 0 0; /* Navbar yüksekliği */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    top: 5rem;
+  }
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Viewport'tan uzunsa scrollable içerik */
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+  padding: .75rem 1rem;
+}
+
+.sidebar .nav-link:hover {
+  color: #5e72e4;
+}
+
+.sidebar .nav-link.active {
+  color: #5e72e4;
+}
+
+.sidebar .nav-link.active i {
+  color: #5e72e4;
+}
+
+.sidebar .nav-link i {
+  margin-right: 4px;
+  color: #727272;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+/* Navbar */
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+  top: .25rem;
+  right: 1rem;
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+/* İstatistik Kartları */
+.border-left-primary {
+  border-left: .25rem solid #5e72e4 !important;
+}
+
+.border-left-success {
+  border-left: .25rem solid #2dce89 !important;
+}
+
+.border-left-info {
+  border-left: .25rem solid #11cdef !important;
+}
+
+.border-left-warning {
+  border-left: .25rem solid #fb6340 !important;
+}
+
+.border-left-danger {
+  border-left: .25rem solid #f5365c !important;
+}
+
+/* Tablolar */
+.table-actions {
+  white-space: nowrap;
+}
+
+/* Grafikler */
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* Dashboard Kartları */
+.card {
+  margin-bottom: 24px;
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(34, 39, 46, 0.1);
+  border: none;
+}
+
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #e3e6f0;
+}
+
+/* Badge renkleri */
+.bg-verified {
+  background-color: #2dce89;
+}
+
+.bg-unverified {
+  background-color: #f5365c;
+}
+
+/* Form stilleri */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+/* Admin görüntüleme detayları */
+.detail-label {
+  font-weight: 600;
+  color: #5e72e4;
+}
+
+/* Kullanıcı avatarları */
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar-sm {
+  width: 35px;
+  height: 35px;
+}
+
+/* Pagination */
+.pagination {
+  margin-bottom: 0;
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.search-box .fa-search {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  color: #aaa;
+}
+
+.search-box input {
+  padding-left: 40px;
+}

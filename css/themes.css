@@ -1,0 +1,249 @@
+/* 
+ * Xfolio Tema Stilleri
+ * Bu dosya kullanıcıların farklı renk temaları seçmesini sağlar
+ */
+
+/* Ana renkler ve değişkenler */
+:root {
+    /* Varsayılan tema (mavi) */
+    --primary-color: #5e72e4;
+    --secondary-color: #f7fafc;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --background-color: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --hover-color: rgba(94, 114, 228, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Koyu tema */
+[data-theme="dark"] {
+    --primary-color: #6772e5;
+    --secondary-color: #2d3748;
+    --text-color: #e2e8f0;
+    --light-text: #a0aec0;
+    --background-color: #1a202c;
+    --card-bg: #2d3748;
+    --border-color: #4a5568;
+    --hover-color: rgba(103, 114, 229, 0.2);
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Yeşil tema */
+[data-theme="green"] {
+    --primary-color: #38b2ac;
+    --secondary-color: #f0fff4;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --background-color: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --hover-color: rgba(56, 178, 172, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Turuncu tema */
+[data-theme="orange"] {
+    --primary-color: #ed8936;
+    --secondary-color: #fffaf0;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --background-color: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --hover-color: rgba(237, 137, 54, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Mor tema */
+[data-theme="purple"] {
+    --primary-color: #9f7aea;
+    --secondary-color: #faf5ff;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --background-color: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --hover-color: rgba(159, 122, 234, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Ana tema stilleri */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+/* Tema geçiş animasyonu */
+.theme-transition {
+    transition: all 0.3s ease;
+}
+
+/* Platform ikonlarını tema renklerine göre ayarla */
+[data-theme="dark"] .platform-icon.youtube {
+    background-color: #ff5252;
+}
+
+[data-theme="dark"] .platform-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* Tema değiştirme düğmesi */
+.theme-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-switcher:hover {
+    transform: scale(1.1);
+}
+
+.theme-switcher i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Platform ikonları için renk ayarları */
+.platform-icon {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.platform-icon.youtube {
+    background-color: #FF0000;
+}
+
+.platform-icon.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.platform-icon.twitter {
+    background-color: #1DA1F2;
+}
+
+.platform-icon.twitch {
+    background-color: #6441a5;
+}
+
+.platform-icon.tiktok {
+    background-color: #000000;
+}
+
+.platform-icon.facebook {
+    background-color: #4267B2;
+}
+
+.platform-icon.linkedin {
+    background-color: #0077B5;
+}
+
+.platform-icon.website {
+    background-color: #4CAF50;
+}
+
+/* Dark mode için özel ayarlamalar */
+[data-theme="dark"] .navbar {
+    background-color: var(--card-bg) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .navbar .nav-link {
+    color: var(--light-text);
+}
+
+[data-theme="dark"] .navbar .nav-link:hover {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .footer {
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Platform renkleri özelleştirmeleri */
+.youtube { --platform-color: #FF0000; }
+.instagram { --platform-color: #C13584; }
+.twitter { --platform-color: #1DA1F2; }
+.facebook { --platform-color: #4267B2; }
+.tiktok { --platform-color: #000000; }
+.twitch { --platform-color: #6441a5; }
+.linkedin { --platform-color: #0077B5; }
+.website { --platform-color: #4CAF50; }
+
+/* Tema menüsü */
+.theme-menu {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.theme-option {
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-option:hover {
+    background-color: var(--hover-color);
+}

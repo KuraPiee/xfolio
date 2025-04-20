@@ -1,0 +1,293 @@
+/**
+ * Xfolio Marketplace Styles
+ * Marketplace sayfaları için özel stiller
+ */
+
+/* Sponsorluk kartları */
+.offer-card {
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.offer-card .card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.5rem;
+}
+
+.offer-card .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 4.5rem;
+}
+
+/* Nasıl çalışır adımlar */
+.steps {
+    position: relative;
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background-color: #e9ecef;
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+/* Sosyal medya badge renkleri */
+.bg-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+}
+
+.bg-twitter {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.bg-twitch {
+    background-color: #6441a5;
+    color: white;
+}
+
+.bg-pink {
+    background-color: #e83e8c;
+    color: white;
+}
+
+/* Marketplace detay sayfası */
+.offer-detail-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.offer-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.offer-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+.offer-header-content {
+    position: relative;
+    z-index: 1;
+}
+
+.offer-requirements {
+    margin-bottom: 1.5rem;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.requirement-icon {
+    color: var(--primary-color);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+.application-form {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+/* Ekleme formu stilleri */
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-section:last-child {
+    border-bottom: none;
+}
+
+.form-section-title {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-section-title i {
+    margin-right: 0.75rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.pricing-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.pricing-option {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pricing-option:hover {
+    border-color: var(--primary-color);
+}
+
+.pricing-option.active {
+    border-color: var(--primary-color);
+    background-color: rgba(94, 114, 228, 0.1);
+}
+
+.pricing-option-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.pricing-option-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-option-description {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Dashboard stilleri */
+.dashboard-nav {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dashboard-nav .nav-link {
+    padding: 15px 20px;
+    color: var(--text-color);
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.dashboard-nav .nav-link:hover {
+    background-color: var(--hover-color);
+}
+
+.dashboard-nav .nav-link.active {
+    background-color: var(--hover-color);
+    border-left-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dashboard-nav .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.status-badge {
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+}
+
+.status-badge.pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.status-badge.approved {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.status-badge.rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.status-badge.completed {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 767px) {
+    .offer-header {
+        padding: 1.5rem;
+    }
+    
+    .steps::before {
+        display: none;
+    }
+    
+    .step {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Dark mode için özel ayarlamalar */
+[data-theme="dark"] .pricing-option {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .pricing-option.active {
+    background-color: rgba(94, 114, 228, 0.2);
+}
+
+[data-theme="dark"] .application-form {
+    background-color: var(--card-bg);
+}
